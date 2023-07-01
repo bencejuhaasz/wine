@@ -394,7 +394,7 @@ static void port_add(snd_seq_client_info_t* cinfo, snd_seq_port_info_t* pinfo, u
         /* Try to use both client and port names, if this is too long take the port name only.
            In the second case the port name should be explicit enough due to its big size.
         */
-        en = strlen(snd_seq_client_info_get_name(cinfo));
+        len = strlen(snd_seq_client_info_get_name(cinfo));
         //if ( (strlen(snd_seq_client_info_get_name(cinfo)) + len + 3) < sizeof(name) ) {
         //    sprintf(name, "%s - %s", snd_seq_client_info_get_name(cinfo), snd_seq_port_info_get_name(pinfo));
         //    len = strlen(name);
